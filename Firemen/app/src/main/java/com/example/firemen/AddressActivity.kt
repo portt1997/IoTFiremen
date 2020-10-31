@@ -1,14 +1,10 @@
 package com.example.firemen
 
-import android.app.Dialog
-import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.Window
 import androidx.appcompat.app.AlertDialog
-import androidx.fragment.app.DialogFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_address.*
 import kotlinx.android.synthetic.main.dialog_layout.*
@@ -43,7 +39,19 @@ class AddressActivity : AppCompatActivity() {
         }
 
         val adapter = MyAdapter()
-        adapter.itemList = listOf(Item("add1"), Item("add2"), Item("add3"))
+        //adapter.itemList = listOf(Item("add1"), Item("add2"), Item("add3"))
+        adapter.recyclerItemList = mutableListOf(RecyclerItem(R.drawable.fire,"충청북도 청주시 245-7 개신동 기원빌"), RecyclerItem(R.drawable.safe,"충청북도 청주시 235-8 개신동 나눔빌"))
+        adapter.recyclerItemList.add(RecyclerItem(R.drawable.safe,"충청북도 청주시 245-7 개신동 기원빌"))
+        adapter.recyclerItemList.add(RecyclerItem(R.drawable.safe,"충청북도 청주시 245-7 개신동 기원빌"))
+        adapter.recyclerItemList.add(RecyclerItem(R.drawable.safe,"충청북도 청주시 245-7 개신동 기원빌"))
+        adapter.recyclerItemList.add(RecyclerItem(R.drawable.safe,"충청북도 청주시 245-7 개신동 기원빌"))
+        adapter.recyclerItemList.add(RecyclerItem(R.drawable.safe,"충청북도 청주시 245-7 개신동 기원빌"))
+        adapter.recyclerItemList.add(RecyclerItem(R.drawable.safe,"충청북도 청주시 245-7 개신동 기원빌"))
+        adapter.recyclerItemList.add(RecyclerItem(R.drawable.safe,"충청북도 청주시 245-7 개신동 기원빌"))
+        adapter.recyclerItemList.add(RecyclerItem(R.drawable.safe,"충청북도 청주시 245-7 개신동 기원빌"))
+        adapter.recyclerItemList.add(RecyclerItem(R.drawable.safe,"충청북도 청주시 245-7 개신동 기원빌"))
+        adapter.recyclerItemList.add(RecyclerItem(R.drawable.safe,"충청북도 청주시 245-7 개신동 기원빌"))
+        adapter.recyclerItemList.add(RecyclerItem(R.drawable.safe,"충청북도 청주시 245-7 개신동 기원빌"))
         recycler_view.adapter = adapter
         recycler_view.layoutManager = LinearLayoutManager(this)
 

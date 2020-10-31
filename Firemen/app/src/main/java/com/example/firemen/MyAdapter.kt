@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.recycler_item.view.*
 
 class MyAdapter : RecyclerView.Adapter<MyViewHolder>() {
-    lateinit var itemList: List<Item>
+    lateinit var recyclerItemList: MutableList<RecyclerItem>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -20,11 +20,12 @@ class MyAdapter : RecyclerView.Adapter<MyViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return itemList.size
+        return recyclerItemList.size
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val currentItem = itemList.get(position)
+        val currentItem = recyclerItemList.get(position)
         holder.itemView.address_view.text = currentItem.address
+        holder.itemView.fireState.setImageResource(currentItem.fireImage)
     }
 }
