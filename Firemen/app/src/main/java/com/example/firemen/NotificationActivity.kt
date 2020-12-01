@@ -16,9 +16,9 @@ class NotificationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notification)
 
-        button.setOnClickListener { view ->
-            var builder = getNotificationBuilder("channel1", "첫 번째 채널")
-            builder.setTicker("Ticker")
+            button.setOnClickListener { view ->
+                var builder = getNotificationBuilder("channel1", "첫 번째 채널")
+                builder.setTicker("Ticker")
             builder.setSmallIcon(android.R.drawable.ic_menu_search)
             var bitmap = BitmapFactory.decodeResource(resources, R.mipmap.ic_launcher)
             builder.setLargeIcon(bitmap)
